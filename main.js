@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+  var offset = $( ".sticky-header" ).offset();
+  var sticky = document.getElementById("sticky-header")
+
+  $(window).scroll(function(event) {
+    event.preventDefault();
+    if ( $(this).scrollTop() > offset.top){
+      $('.sticky-header').addClass('fixed');
+    } else {
+      $('.sticky-header').removeClass('fixed');
+    }
+
+  });
+
   $('li').hover(function() {
 
     $( this ).addClass( "hoverNav" );

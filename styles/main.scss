@@ -5,6 +5,9 @@ body {
   background-color: $bg-color;
 }
 
+.container {
+  height: 2000px;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -40,13 +43,35 @@ h2 {
 
 //HEADER//
 
-header {
+
+.cover-photo-container {
+  width:100%;
+  height: 1000px;
+  background-color:red;
+}
+
+
+.sticky-header {
   width: 100%;
   height: 180px;
   background-color: $header-color;
   border-bottom: 4px solid #77ddae;
   @include shadow (0px 5px 5px 2px rgba(22, 22, 22, 0.75));
+
 }
+.fixed{
+  position: fixed;
+  top: 0px;
+}
+.clear {
+  clear:both;
+}
+
+.homeTrucks {
+  padding-top: 30px;
+}
+
+
   nav {
     ul{
       display: block;
@@ -64,9 +89,7 @@ header {
       }
     }
 
-.homeTrucks {
-  padding-top: 30px;
-}
+
 //MAIN??
 
 .mainBody {
@@ -75,8 +98,8 @@ header {
   border: 1px solid #ccc;
   box-shadow: 0px 5px 10px rgba(0,0,0,.27);
   display: block;
+  height: 1114px;
   margin: 0 auto;
-  min-height: 1000px;
   padding: 0 10px 0 10px;
 
 }
@@ -172,6 +195,9 @@ article {
   display:none;
 }
 
+.hasScrolled {
+  height:180px;
+}
 .span {
   display: inline;
 }
