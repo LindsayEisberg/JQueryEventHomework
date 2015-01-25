@@ -1,0 +1,14 @@
+$header-color: #E9633B;
+$bg-color: #424242;
+$secondary-color: #77ddae;
+$primary-font-color: #ECEAE0; //white
+$secondary-font-color: #424242;
+$header-font: "abril-fatface",serif;
+$p-font: "abril-text",sans-serif;
+
+
+@mixin shadow ($shadow){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
