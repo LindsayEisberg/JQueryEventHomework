@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   $('li').hover(function() {
+
     $( this ).addClass( "hoverNav" );
   }, function() {
     $( this ).removeClass( "hoverNav" );
@@ -9,9 +10,24 @@ $(document).ready(function(){
 
   $('nav a').on('click', function(event){
     event.preventDefault();
-    $(this).closest("li").siblings().removeClass("activeNav");
+    var relatedClass = "." + $(this).attr('rel');    $(this).closest("li").siblings().removeClass("activeNav");
     $(this).closest('li').addClass("activeNav");
+    $(relatedClass).siblings().removeClass('active');
+    $(relatedClass).addClass('active');
   });
 
+  $(".mainBody").on("dblclick", "button", function(event) {
+    event.preventDefault();
+    $(".images").slideToggle();
+  });
+
+
+  $(".images").on("mouseenter", "li", function() {
+    $(this).removeClass('hoverNav');
+    $(this).find("span").slideToggle();
+  });
+  $(".images").on("mouseleave", "li", function() {
+    $(this).find("span").slideToggle();
+  });
 
 });

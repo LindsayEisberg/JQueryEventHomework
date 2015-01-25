@@ -23,6 +23,13 @@ h1 {
 h2, p {
   color: #424242; }
 
+p {
+  font-family: "abril-text", sans-serif;
+  font-size: 16px; }
+
+h2 {
+  font-family: "futura-pt", serif; }
+
 header {
   width: 100%;
   height: 180px;
@@ -57,8 +64,67 @@ nav a {
   min-height: 1000px;
   padding: 0 10px 0 10px; }
 
+.images {
+  margin-left: 21px;
+  margin-top: 18px;
+  position: relative;
+  display: none; }
+  .images ul {
+    display: block; }
+  .images li {
+    display: inline-block; }
+  .images span {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 5px;
+    display: none;
+    line-height: 30px;
+    position: absolute;
+    overflow: hidden;
+    width: 280px;
+    padding: 20px 10px 20px 10px;
+    color: #ECEAE0;
+    font-family: "abril-text", sans-serif;
+    font-size: 16px; }
+
+button, .heuvos button, .rottiRolls button, .donuts button, .autobanh button {
+  display: none;
+  font-size: 1.7em;
+  font-family: "futura-pt", serif;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block; }
+
+.heuvos button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.88) 46%, rgba(255, 255, 255, 0.5) 100%, rgba(255, 255, 255, 0.8) 100%), url("../photos/thumbheuvosLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.rottiRolls button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.88) 46%, rgba(255, 255, 255, 0.5) 100%, rgba(255, 255, 255, 0.8) 100%), url("../photos/thumbrottiLogo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.donuts button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.88) 46%, rgba(255, 255, 255, 0.5) 100%, rgba(255, 255, 255, 0.8) 100%), url("../photos/thumbdonutsLogo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.autobanh button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.88) 46%, rgba(255, 255, 255, 0.5) 100%, rgba(255, 255, 255, 0.8) 100%), url("../photos/thumbbanh4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .active {
   display: block; }
+
+article {
+  display: none; }
+
+.span {
+  display: inline; }
 
 .activeNav {
   background-color: #77ddae;
