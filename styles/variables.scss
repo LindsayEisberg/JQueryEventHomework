@@ -1,14 +1,36 @@
-$header-color: #E9633B;
-$bg-color: #424242;
-$secondary-color: #77ddae;
-$primary-font-color: #ECEAE0; //white
+$header-color: #E9633B;//contact orange
+$bg-color: #424242;///contact blue
+$secondary-color: #77ddae;//contact teal
+$primary-font-color: #ECEAE0; //white//contact grey
 $secondary-font-color: #424242;
+$contact-bg: #E8E9EA;
 $header-font: "futura-pt",serif;
 $p-font: "abril-text",sans-serif;
+
 
 
 @mixin shadow ($shadow){
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
   box-shadow: $shadow;
+}
+
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+@mixin grid($column) {
+  width:(100%/12) * $column;
+  margin:0 auto;
+}
+
+// Transition Ease
+@mixin ease($time:1s, $attr:all, $curve:ease-in-out) {
+  -webkit-transition: $attr $time $curve;
+  -moz-transition: $attr $time $curve;
+  -o-transition: $attr $time $curve;
+  -ms-transition: $attr $time $curve;
+  transition: $attr $time $curve;
 }

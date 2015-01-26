@@ -43,4 +43,34 @@ $(document).ready(function(){
     $(this).find("span").slideToggle();
   });
 
+
+$( "input" ).focus(function() {
+  // $(this).siblings().removeClass('activeInput');
+  $( this ).addClass('activeInput');
+});
+
+$("textarea").on("focus", function(){
+  // $(this).siblings().removeClass("activeInput");
+  $(this).addClass("activeInput");
+
+});
+
+$("input").blur(function(){
+  if ($(this) !== $('.activeInput')) {
+    // $(this).css("border", "none");
+    $(this).removeClass('activeInput')
+  }
+});
+
+$("textarea").blur(function(){
+  if ($(this) !== $('.activeInput')) {
+    $(this).removeClass("activeInput");
+  }
+});
+
+$( "form" ).submit(function( event ) {
+  event.preventDefault();
+    $( "span" ).text( "Thank You! Your message has been submitted" ).show();
+    return;
+  });
 });

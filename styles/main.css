@@ -31,12 +31,18 @@ p {
   font-size: 16px; }
 
 h2 {
-  font-family: "futura-pt", serif; }
+  font-family: "futura-pt", serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: left; }
 
 .cover-photo-container {
   width: 100%;
   height: 1000px;
-  background-color: red; }
+  background: linear-gradient(rgba(233, 99, 59, 0.2), #e9633b), url(../photos/foodTruckHeadImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .sticky-header {
   width: 100%;
@@ -132,6 +138,88 @@ button, .heuvos button, .rottiRolls button, .donuts button, .autobanh button {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.contact {
+  text-align: center; }
+
+form {
+  width: 58%; }
+  form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px; }
+
+label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #424242;
+  width: 18%;
+  padding: 18px 0;
+  font-size: 1em;
+  letter-spacing: 0.075em;
+  color: white; }
+  label + span {
+    font-family: 'SSStandard';
+    opacity: 0;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 7%;
+    font-size: 2.5em;
+    text-shadow: 1px 2px 0 #77ddae;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+
+input[type="text"], textarea {
+  width: 90%;
+  margin: 0;
+  padding: 15px 0;
+  padding-left: 19.5%;
+  color: #424242;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+  input[type="text"]#msg, textarea#msg {
+    height: 18px;
+    resize: none;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+
+:focus, .focused {
+  outline: none; }
+  :focus#msg, .focused#msg {
+    padding-bottom: 150px; }
+
+input[type="submit"] {
+  background: #E9633B;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  float: left; }
+  input[type="submit"]:hover {
+    background: #424242;
+    color: white; }
+  input[type="submit"]:focus {
+    outline: none;
+    background: #77ddae; }
+
 .active {
   display: block; }
 
@@ -152,4 +240,10 @@ article {
 .hoverNav {
   background-color: #77ddae;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
+  border-top-right-radius: 10px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.activeInput {
+  border: 3px solid #77ddae; }

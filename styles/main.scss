@@ -17,6 +17,7 @@ ul {
 a {
   text-decoration: none;
   font-size: 16px;
+
 }
 
 h1 {
@@ -39,7 +40,13 @@ p {
 
 h2 {
   font-family: $header-font;
+  font-size: 2em;
+  text-transform:uppercase;
+  text-align: left;
+
 }
+
+
 
 //HEADER//
 
@@ -47,7 +54,10 @@ h2 {
 .cover-photo-container {
   width:100%;
   height: 1000px;
-  background-color:red;
+  background: linear-gradient(rgba(233,99,59,0.2), rgba(233,99,59,1)), url(../photos/foodTruckHeadImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -90,7 +100,7 @@ h2 {
     }
 
 
-//MAIN??
+//MAIN//
 
 .mainBody {
   max-width: 950px;
@@ -183,6 +193,97 @@ button {
   }
 }
 
+//Contact Form//
+
+.contact {
+  text-align:center;
+
+}
+
+form {
+  width: 58%;
+  .field {
+    width:100%;
+    position:relative;
+    margin-bottom:15px;
+  }
+
+}
+
+label {
+  text-transform: uppercase;
+  position:absolute;
+  top:0;
+  left:0;
+  background:$bg-color;
+  width:18%;
+  padding:18px 0;
+  font-size: 1em;
+  letter-spacing: 0.075em;
+  color: white;
+  + span {
+    font-family: 'SSStandard';
+    opacity: 0;
+    color:white;
+    display: block;
+    position:absolute;
+    top: 12px;
+    left: 7%;
+    font-size: 2.5em;
+    text-shadow:1px 2px 0 $secondary-color;
+
+    @include ease(1s);
+  }
+}
+
+input[type="text"], textarea {
+  width:90%;
+  margin:0;
+  padding:15px 0;
+  padding-left:19.5%;
+  color:$bg-color;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  &#msg {
+    height: 18px;
+    resize: none;
+    @include ease(1s);
+    }
+  }
+  &:focus,
+  &.focused {
+    outline:none;
+    &#msg {
+      padding-bottom:150px;
+    }
+  }
+
+
+// Submit Button
+input[type="submit"] {
+  background:$header-color;
+  color:white;
+  border: none;
+  text-transform: uppercase;
+  position:relative;
+  padding: 13px 50px;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  @include ease;
+  float: left;
+  &:hover {
+    background:$bg-color;
+    color:white;
+  }
+  &:focus {
+    outline:none;
+    background:$secondary-color;
+  }
+}
+
+
+
 
 
 //JQUERY//
@@ -204,10 +305,17 @@ article {
 .activeNav {
     background-color: $secondary-color;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;}
+    border-top-right-radius: 10px;
+  }
 
 .hoverNav {
   background-color: $secondary-color;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  @include transition (all 1s ease);
+
+}
+
+.activeInput {
+  border: 3px solid $secondary-color;
 }
