@@ -70,7 +70,7 @@ $("textarea").blur(function(){
 
 $( "form" ).submit(function( event ) {
   event.preventDefault();
-    $( "span" ).text( "Thank You! Your message has been submitted" ).show();
+    $( "h4" ).text( "Thank You! Your message has been submitted" ).show();
     return;
   });
 });

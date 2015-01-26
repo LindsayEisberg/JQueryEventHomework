@@ -1,16 +1,114 @@
 label {
-text-transform: uppercase;
-position: absolute;
-top: 0;
-left: 0;
-background: #424242;
-width: 25%;
-padding: 18px 0;
-font-size: 1em;
-letter-spacing: 0.075em;
-/* -webkit-transition: all 1s ease-in-out; */
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
--ms-transition: all 1s ease-in-out;
-/* transition: all 1s ease-in-out; */
-}
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #424242;
+  width: 18%;
+  padding: 18px 0;
+  font-size: 1em;
+  letter-spacing: 0.075em;
+  /* -webkit-transition: all 1s ease-in-out; */
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
+  color: white;
+
+  input[type="text"], textarea {
+    border: none;
+    /* background: #E8E9EA; */
+    width: 90%;
+    margin: 0;
+    padding: 17px 0;
+    padding-left: 19.5%;
+    color: #424242;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    .contact {
+      /* margin: 60px auto 120px; */
+      /* border-top: 15px solid #77ddae; */
+      text-align: center;
+      /* padding: 50px 0 110px; */
+      /* width: 80%; */
+      /* max-width: 1100px; */
+    }
+
+    form {
+      width: 58%;
+
+
+
+      font-family: "futura-pt", serif;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+
+    input[type="text"]#msg, textarea#msg {
+      height: 18px;
+      resize: none;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 1s ease-in-out;
+
+      input[type="submit"] {
+        background: #E9633B;
+        color: white;
+        /* -webkit-appearance: none; */
+        border: none;
+        text-transform: uppercase;
+        position: relative;
+        padding: 13px 50px;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+      }
+
+
+
+
+
+
+
+      &:focus,
+      &.focused {
+        outline:none;
+        &#msg {
+          padding-bottom:150px;
+        }
+        + label {
+          width:18%;
+          background:$secondary-color;
+          color:$bg-color;
+        }
+      }
+
+
+
+      // JS Toggle Class
+      &.focused {
+        + label {
+          color: $bg-color;
+        }
+      }
+
+
+      /* // Field Hover
+      &:hover {
+      label {
+      width:18%;
+      background:\$bg-color;
+      color:white;
+    }
+  }
+  */
